@@ -10,7 +10,7 @@ import java.util.TimerTask;
 
 /**
  *
- * @author mymac
+ * @author Team 13
  */
 public class IGTW {
 
