@@ -14,28 +14,21 @@ import java.util.TimerTask;
  */
 public class IGTW {
 
-    
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+        int i = 0;
+        int previousSecond;
 //Run Clock(unsynced)
-        //DemoClass timer = new DemoClass();
-        //timer.start();
-        
+        LocalTime timer = new LocalTime();
+        timer.start();
+        //System.out.println(timer.to12Hour());
+        while (i < 1) {
+            Thread.sleep(1000);
+            System.out.println(timer.toMilitary());
+        }
 
 //Run Alarm
-        System.out.println("Alarm (Format H|M|S)\n");
-        Countdown alarm = new Countdown();
-        alarm.start();
-    }
-
-}
-/*
-    public static void main(String[] args) {
-       System.out.println("Hello World");
-        DemoClass demo = new DemoClass();
-        TimerTask task = demo.task;
-        
+        //      System.out.println("Alarm (Format H|M|S)\n");
+        //      Countdown alarm = new Countdown();
+        //     alarm.start();
     }
 }
-    */
- 
-

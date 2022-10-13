@@ -16,7 +16,7 @@ import java.util.Scanner;
 public class Countdown {
 
     Scanner input = new Scanner(System.in);
-    int hours = input.nextInt();  
+    int hours   = input.nextInt();  
     int minutes = input.nextInt();
     int seconds = input.nextInt();
  
@@ -26,12 +26,14 @@ public class Countdown {
     TimerTask task = new TimerTask() {
 
         public void run() {
-
+Ï
+           
             String s = String.format("%02d", seconds);
             String m = String.format("%02d", minutes);
             String h = String.format("%02d", hours);
             System.out.println(h + ":" + m + ":" + s);
             System.out.println("\n");
+            
             if (minutes + seconds + hours == 0) {
                 return;
             }
@@ -52,7 +54,7 @@ public class Countdown {
         }
 
     };
-
+    
     public void start() {
         alarm.scheduleAtFixedRate(task, 1000, 1000);
     }
