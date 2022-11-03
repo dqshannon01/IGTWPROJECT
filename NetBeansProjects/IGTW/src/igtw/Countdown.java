@@ -11,29 +11,27 @@ import java.util.Scanner;
 
 /**
  *
- * @author mymac
+ * @author Team 13
  */
 public class Countdown {
 
     Scanner input = new Scanner(System.in);
-    int hours   = input.nextInt();  
+    int hours = input.nextInt();
     int minutes = input.nextInt();
     int seconds = input.nextInt();
- 
-
-
+    
+ //New alarm object
     Timer alarm = new Timer();
     TimerTask task = new TimerTask() {
 
         public void run() {
-Ï
-           
+
             String s = String.format("%02d", seconds);
             String m = String.format("%02d", minutes);
             String h = String.format("%02d", hours);
             System.out.println(h + ":" + m + ":" + s);
             System.out.println("\n");
-            
+
             if (minutes + seconds + hours == 0) {
                 return;
             }
@@ -55,6 +53,7 @@ public class Countdown {
 
     };
     
+//Start timer after 1 second
     public void start() {
         alarm.scheduleAtFixedRate(task, 1000, 1000);
     }
